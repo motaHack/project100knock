@@ -1,0 +1,12 @@
+num = 1
+sum = 0
+
+for num in 1..999 do
+
+  if num % 3 == 0 || num % 5 == 0 then
+    sum += num
+  end
+  num += 1
+end
+
+print("sum:",sum,"\n")
