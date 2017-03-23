@@ -1,20 +1,26 @@
-i = 13
+include Math
 
-flg = true
-primes = []
+i = 2
+count = 0
 
-while primes.size <= 1 do
+def isPrime(i)
   n = 2
-  while n < i do
+  for n in 2..sqrt(i)  do
     if i % n == 0
-      flg = false
-      break
+      return false
     end
     n += 1
   end
+end
 
-  if flg == true
-    primes.push(i)
+while count <= 10001  do
+
+  if isPrime(i)
+    count += 1
+  end
+
+  if count == 10001
+    break
   end
 
   if i == 2
@@ -22,7 +28,5 @@ while primes.size <= 1 do
   else
     i += 2
   end
-  print(i,"\n")
 end
-
-print(primes,"\n")
+print(i,"\n")
