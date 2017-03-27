@@ -29,4 +29,45 @@ max = 0
 rows = nums.split("\n")
 sq = rows.map { |x| x.split(" ").map { |x| x.to_i } }
 
+# よこ
+sq.each{|n|
+  for i in 0..16  do
+    pro = n[i] * n[i+1] * n[i+2] * n[i+3]
+    if max < pro
+      max = pro
+    end
+  end}
+
+# たて
+for n in 0..19 do
+  for i in 0..16 do
+    pro = sq[n][i] * sq[n][i+1] * sq[n][i+2] * sq[n][i+3]
+    if max < pro
+      max = pro
+    end
+  end
+end
+
+# 左うえからのななめ
+for n in 0..16 do
+  for i in 0..16 do
+    pro = sq[n][i] * sq[n+1][i+1] * sq[n+2][i+2] * sq[n+3][i+3]
+    if max < pro
+      max = pro
+    end
+  end
+end
+
+# 右上からのななめ
+for n in 0..16 do
+  for i in 0..16 do
+    pro = sq[n][i+3] * sq[n+1][i+2] * sq[n+2][i+1] * sq[n+3][i]
+    if max < pro
+      max = pro
+    end
+  end
+end
+
+puts(max)
+
 puts(Time.now - start_time)
