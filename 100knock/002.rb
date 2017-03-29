@@ -1,3 +1,5 @@
+start_time = Time.now
+
 i = 1
 num1 = 0
 num2 = 1
@@ -15,3 +17,4 @@ while (num3 <= 4000000) do
 end
 
 print("sum:",sum,"\n")
+puts(Time.now - start_time)

@@ -1,7 +1,9 @@
+start_time = Time.now
+
 num = 1
 sum = 0
 
-for num in 1..999 do
+while num < 1000 do
 
   if num % 3 == 0 || num % 5 == 0 then
     sum += num
@@ -10,3 +12,4 @@ for num in 1..999 do
 end
 
 print("sum:",sum,"\n")
+puts(Time.now - start_time)
