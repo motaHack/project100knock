@@ -3,7 +3,6 @@ include Math
 start_time = Time.now
 i = 2
 sum = 0
-n = 2
 
 def isPrime(i)
   n = 2
