@@ -1,28 +1,23 @@
+include Math
+
+start_time = Time.now
+
 i = 2
-box = []
+max = 0
 num = 600851475143
 
-while (i < num) do
-
-  count = 0
-  n = 1
-  while (n <= i) do
-    if i%n == 0
-      count += 1
-    end
-    n += 1
+for i in 2..sqrt(num) do
+  if num % i == 0
+    
+    num /= i
+    max = i
   end
-
-  if count == 2
-    if num % i == 0
-      box.push(i)
-    end
+  if i = 2
+    i += 1
+  else
+    i += 2
   end
-
-  i += 1
 end
 
-print("max:",box.max,"\n")
-
-# 1行で書ける・・・
-# a=600851475143;(2..a).each{|i|i<a or break;a/=i while a%i==0};p a
+puts(max)
+puts(Time.now - start_time)
