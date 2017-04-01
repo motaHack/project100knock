@@ -8,7 +8,6 @@ num = 600851475143
 
 for i in 2..sqrt(num) do
   if num % i == 0
-    
     num /= i
     max = i
   end
