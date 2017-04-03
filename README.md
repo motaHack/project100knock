@@ -1,2 +1,2 @@
 # project100knock
-バグ体質
+プロジェクトオイラーをrubyで解く
