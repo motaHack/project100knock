@@ -5,10 +5,27 @@ num = {1 => "one",2 => "two",3 => "three",4 => "four",5 => "five",6 => "six",7 =
 i = 1
 total = 0
 
-for i in 1..10 do
-  (i.to_s).chars{|ch|
-    puts(num[(ch.to_i)])
-  }
+for i in 1..1000 do
+
+  case i
+  when 1..20
+    puts(num[i])
+
+  when 21..99
+    n = i%10
+    puts(num[n])
+    puts(num[(i-n)])
+
+  when 100..999
+    n = i % 100
+    m = n % 10
+    puts(num[m])
+    puts(num[(n-m)])
+    puts(num[(i-n)])
+
+  else
+    puts(num[1000])
+  end
 end
 
 puts(total)
