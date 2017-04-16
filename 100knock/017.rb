@@ -1,4 +1,4 @@
-start_time = Time.now
+ start_time = Time.now
 
 num = {1 => "one",2 => "two",3 => "three",4 => "four",5 => "five",6 => "six",7 => "seven",8 => "eight",9 => "nine",10 => "ten",11 => "eleven",12 => "twelve",13 => "thirteen",14 => "fourteen",15 => "fifteen",16 => "sixteen",17 => "seventeen",18 => "eighteen",19 => "nineteen",20 => "twenty",30 => "thirty",40 => "forty",50 => "fifty",60 => "sixty",70 => "seventy",80 => "eighty",90 => "ninety",100 => "hundred",1000 => "onethousand"}
 
@@ -6,15 +6,16 @@ i = 1
 total = 0
 
 for i in 1..1000 do
-
   case i
+
   when 1..20
-    puts(num[i])
+    total += String(num[i]).length
 
   when 21..99
     n = i%10
-    puts(num[n])
     puts(num[(i-n)])
+    puts(num[n])
+    total += String(num[(i-n)]).length + String(num[n]).length
 
   when 100..999
     n = i % 100
@@ -22,9 +23,10 @@ for i in 1..1000 do
     puts(num[m])
     puts(num[(n-m)])
     puts(num[(i-n)])
+    total += String(num[i-n]).length + String(num[n-m]).length + String(num[m]).length
 
   else
-    puts(num[1000])
+    total += String(num[1000]).length
   end
 end
 
