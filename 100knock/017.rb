@@ -18,12 +18,10 @@ for i in 1..1000 do
     total += String(num[(i-n)]).length + String(num[n]).length
 
   when 100..999
-    n = i % 100
-    m = n % 10
-    puts(num[m])
-    puts(num[(n-m)])
-    puts(num[(i-n)])
-    total += String(num[i-n]).length + String(num[n-m]).length + String(num[m]).length
+    n = i % 100 //しもふたけた
+    m = n % 10 //しもいちけた
+    l = (i - n)/100 //かみひとけた
+    total += String(num[l]).length + String(num[100]).length String(num[n-m]).length + String(num[m]).length
 
   else
     total += String(num[1000]).length
