@@ -22,11 +22,13 @@ for i in 1..1000 do
     n = i % 100 #しもふたけた
     m = n % 10 #しもひとけた
     l = (i - n)/100 #かみひとけた
-    puts(num[l])
-    puts(num[100])
-    puts(num[n-m])
-    puts(num[m])
-    total += String(num[l]).length + String(num[100]).length + String(num[n-m]).length + String(num[m]).length
+    if 10 <= n && n <= 20
+      print(num[l],"-",num[100],"-",num[n],"\n")
+      total += String(num[l]).length + String(num[100]).length + String(num[n]).length
+    else
+      print(num[l],"-",num[100],"-",num[n-m],"-",num[m],"\n")
+      total += String(num[l]).length + String(num[100]).length + String(num[n-m]).length + String(num[m]).length
+    end
 
   else
     total += String(num[1000]).length
