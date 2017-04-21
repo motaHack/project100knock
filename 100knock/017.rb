@@ -23,10 +23,10 @@ for i in 1..1000 do
     m = n % 10 #しもひとけた
     l = (i - n)/100 #かみひとけた
     if 10 <= n && n <= 20
-      print(num[l],"-",num[100],"-",num[n],"\n")
+      print(num[l]," ",num[100],"and",num[n],"\n")
       total += String(num[l]).length + String(num[100]).length + String(num[n]).length
     else
-      print(num[l],"-",num[100],"-",num[n-m],"-",num[m],"\n")
+      print(num[l]," ",num[100]," ",num[n-m]," ",num[m],"\n")
       total += String(num[l]).length + String(num[100]).length + String(num[n-m]).length + String(num[m]).length
     end
 
