@@ -14,23 +14,33 @@ for i in 1..1000 do
 
   when 21..99
     n = i%10
-    puts(num[(i-n)])
-    puts(num[n])
+    print(num[i-n]," ",num[n],"\n")
     total += String(num[(i-n)]).length + String(num[n]).length
 
   when 100..999
     n = i % 100 #しもふたけた
     m = n % 10 #しもひとけた
     l = (i - n)/100 #かみひとけた
-    if 10 <= n && n <= 20
-      print(num[l]," ",num[100],"and",num[n],"\n")
+
+    if n == 0
+      print(num[l]," ",num[100],"\n")
+      total += String(num[l]).length + String(num[100]).length
+
+    elsif 1<= n && n <= 10
+      print(num[l]," ",num[100]," ",num[n],"\n")
       total += String(num[l]).length + String(num[100]).length + String(num[n]).length
+
+    elsif 10 < n && n <= 20
+      print(num[l]," ",num[100]," and ",num[n],"\n")
+      total += String(num[l]).length + String(num[100]).length + "and".length + String(num[n]).length
+
     else
-      print(num[l]," ",num[100]," ",num[n-m]," ",num[m],"\n")
-      total += String(num[l]).length + String(num[100]).length + String(num[n-m]).length + String(num[m]).length
+      print(num[l]," ",num[100]," and ",num[n-m]," ",num[m],"\n")
+      total += String(num[l]).length + String(num[100]).length + "and".length + String(num[n-m]).length + String(num[m]).length
     end
 
   else
+    puts(num[1000])
     total += String(num[1000]).length
   end
 end
