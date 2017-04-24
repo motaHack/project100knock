@@ -5,11 +5,20 @@ tri = [[75],[95,64],[17,47,82],[18,35,87,10],[20,4,82,47,65],[19,1,23,75,3,34],[
 
 tri.each{|arr|
   max = 0
-  arr.each { |num|
-    if max < num
-      max = num
-    end
-  }
+  p = 0
+
+  if max < arr[p]
+    max = arr[p]
+    p = arr.index(arr[p])
+  end
+
+  if max < arr[p+1] && tortal == 0
+    max = arr[p+1]
+    p = arr.index(arr[p+1])
+  end
+
+  print("位置：")
+  puts(p)
   puts(max)
   total += max
 }
