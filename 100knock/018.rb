@@ -11,10 +11,9 @@ tri.each{|arr|
     max = arr[0]
   elsif arr[p+1] < arr[p]
     max = arr[p]
-    p = arr.index(arr[p])
   else
     max = arr[p+1]
-    p = arr.index(arr[p+1])
+    p = p + 1
   end
   puts(max)
   total += max
