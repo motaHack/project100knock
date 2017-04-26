@@ -22,6 +22,7 @@ tri = [[75],
 
 tri.each{|arr|
 
+puts(arr[p]
   if total == 0
     max = arr[p]
   elsif arr[p+1] < arr[p]
