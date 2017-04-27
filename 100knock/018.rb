@@ -19,20 +19,14 @@ tri = [[75],
 [63, 66, 04, 68, 89, 53, 67, 30, 73, 16, 69, 87, 40, 31],
 [04, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 04, 23]]
 
-
-tri.each{|arr|
-
-puts(arr[p]
-  if total == 0
-    max = arr[p]
-  elsif arr[p+1] < arr[p]
-    max = arr[p]
+for i in 0..tri.size do
+  if tri[i][p] + tri[i + 1][p] < tri[i][p] + tri[i + 1][p + 1]
+    max = tri[i][p]
   else
-    max = arr[p+1]
-    p = p + 1
+    max = tri[i+1][p]
   end
   total += max
-}
+end
 
 puts(total)
 puts(Time.now - start_time)
