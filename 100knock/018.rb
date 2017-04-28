@@ -23,7 +23,9 @@ for i in 0..tri.size do
   if tri[i][p] + tri[i + 1][p] < tri[i][p] + tri[i + 1][p + 1]
     max = tri[i][p]
   else
-    max = tri[i+1][p]
+    max = tri[i][p+1]
+    p += 1
+    
   end
   total += max
 end
