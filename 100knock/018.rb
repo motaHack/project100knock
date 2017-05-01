@@ -19,13 +19,23 @@ tri = [[75],
 [63, 66, 04, 68, 89, 53, 67, 30, 73, 16, 69, 87, 40, 31],
 [04, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 04, 23]]
 
-for i in 0..tri.size do
-  if tri[i][p] + tri[i + 1][p] < tri[i][p] + tri[i + 1][p + 1]
+for i in 0..(tri.size - 2) do
+  if total == 0
     max = tri[i][p]
+    total += max
+  end
+
+  if tri[i][p] + tri[i+1][p]  < tri[i][p] + tri[i+1][p+1]
+    max = tri[i+1][p+1]
+    total += max
+    puts tri[i+1][p+1]
+    p += 1
   else
     max = tri[i+1][p]
+    total += max
+    puts tri[i+1][p]
   end
-  total += max
+
 end
 
 puts(total)
