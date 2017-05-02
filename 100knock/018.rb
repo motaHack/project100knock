@@ -28,12 +28,10 @@ for i in 0..(tri.size - 2) do
   if tri[i][p] + tri[i+1][p]  < tri[i][p] + tri[i+1][p+1]
     max = tri[i+1][p+1]
     total += max
-    puts tri[i+1][p+1]
     p += 1
   else
     max = tri[i+1][p]
     total += max
-    puts tri[i+1][p]
   end
 
 end
