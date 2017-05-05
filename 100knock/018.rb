@@ -18,15 +18,24 @@ tri = [[75],
 [91, 71, 52, 38, 17, 14, 91, 43, 58, 50, 27, 29, 48],
 [63, 66, 04, 68, 89, 53, 67, 30, 73, 16, 69, 87, 40, 31],
 [04, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 04, 23]]
+# なんか再帰をとやらをつかうらしい
 
-(1...tri.size).each do |i|
-	(0...tri[i].size).each do |j|
-		max = 0
-		max = tri[i - 1][j - 1] if j - 1 >= 0
-		max = [max, tri[i - 1][j]].max if tri[i - 1].size > j
-		tri[i][j] += max
-	end
+for i in 0..(tri.size - 2) do
+  if total == 0
+    max = tri[i][p]
+    total += max
+  end
+
+  if tri[i][p] + tri[i+1][p]  < tri[i][p] + tri[i+1][p+1]
+    max = tri[i+1][p+1]
+    total += max
+    p += 1
+  else
+    max = tri[i+1][p]
+    total += max
+  end
+
 end
 
-p tri.last.max
+p total
 puts(Time.now - start_time)
