@@ -1,19 +1,21 @@
 start_time = Time.now
 sunday = 0
-domi = 1900
+year = 1900
 month = 1
-date = 1
 
-while domi < 2001 do
-  # うるう年
-  if (domi % 4 == 0)
-  && !((domi % 400 != 0) && (domi % 100 == 0))
-    
-
+def uruu(year)
+  if year % 4 != 0
+    return false
+  elsif year % 400 !=0 && year % 100 !=0
+    return false
   else
-    # うるう年ではない
-
+    return true
   end
+end
+
+while year < 2001 do
+  
+  year += 1
 end
 
 p sunday
