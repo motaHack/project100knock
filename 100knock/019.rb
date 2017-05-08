@@ -14,7 +14,12 @@ def uruu(year)
 end
 
 while year < 2001 do
-  
+  while month <= 12 do
+
+    # switch
+    month += 1
+  end
+  month = 1
   year += 1
 end
 
