@@ -50,11 +50,14 @@ while year <= 2000 do
       sunday += 1 if day % 7 == 0
       day += 30
     when 10
-
+      sunday += 1 if day % 7 == 0
+      day += 30
     when 11
-
+      sunday += 1 if day % 7 == 0
+      day += 30
     when 12
-
+      sunday += 1 if day % 7 == 0
+      day += 31
     end
     month += 1
   end
