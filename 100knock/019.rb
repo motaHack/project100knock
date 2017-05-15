@@ -65,5 +65,10 @@ while year <= 2000 do
   year += 1
 end
 
+# when 1900 
+def count_sunday_in_1900()
+  
+end
+
 p sunday
 puts(Time.now - start_time)
