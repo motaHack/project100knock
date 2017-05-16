@@ -18,7 +18,7 @@ while year <= 2000 do
   if year == 1901
     sunday = 0
   end
-  
+
   while month <= 12 do
     case month
     when 1
@@ -54,7 +54,7 @@ while year <= 2000 do
       day += 30
     when 10
       sunday += 1 if day % 7 == 0
-      day += 30
+      day += 31
     when 11
       sunday += 1 if day % 7 == 0
       day += 30
