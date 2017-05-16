@@ -15,8 +15,11 @@ def uruu(year)
 end
 
 while year <= 2000 do
+  if year == 1901
+    sunday = 0
+  end
+  
   while month <= 12 do
-
     case month
     when 1
       sunday += 1 if day % 7 == 0
@@ -63,11 +66,6 @@ while year <= 2000 do
   end
   month = 1
   year += 1
-end
-
-# when 1900 
-def count_sunday_in_1900()
-  
 end
 
 p sunday
