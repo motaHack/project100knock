@@ -7,7 +7,7 @@ day = 0
 def uruu(year)
   if year % 4 != 0
     return false
-  elsif year % 400 !=0 && year % 100 !=0
+  elsif year % 400 !=0
     return false
   else
     return true
@@ -15,6 +15,7 @@ def uruu(year)
 end
 
 while year <= 2000 do
+
   if year == 1901
     sunday = 0
   end
