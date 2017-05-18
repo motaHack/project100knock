@@ -1,13 +1,24 @@
 start_time = Time.now
 
-def make_divisor(num)
-  div = []
-  for i in 1..num-1 do
-    if num % i == 0
-      div << i
-    end
-  end
-  return div
+def sum_divisor(num)
+  divs = (1..(num-1)).select {|i|
+    (num % i) == 0
+  }
+
+  sum = 0
+  divs.each{|i|
+    sum += i
+  }
+  return sum
 end
+
+p sum_divisor(220)
+
+# i = 1
+# while i < 10000 do
+#
+#   n = sum_divisor(i)
+#
+# end
 
 puts(Time.now - start_time)
