@@ -1,5 +1,4 @@
 start_time = Time.now
-total = 0
 yuuai = []
 
 def sum_divisor(num)
@@ -15,15 +14,13 @@ def sum_divisor(num)
 end
 
 for a in 1..10000 do
-  if !yuuai.include?(a)
-    b = sum_divisor(a)
-    if sum_divisor(b) == a
-      total = a + b
-      yuuai << b
-    end
+  b = sum_divisor(a)
+  if sum_divisor(b) == a
+    yuuai << a if !yuuai.include?(a)
+    yuuai << b if !yuuai.include?(b)
   end
   a += 1
 end
 
-p total
+p yuuai
 puts(Time.now - start_time)
