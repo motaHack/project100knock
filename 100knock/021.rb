@@ -1,5 +1,6 @@
 start_time = Time.now
 yuuai = []
+total = 0
 
 def sum_divisor(num)
   divs = (1..(num-1)).select {|i|
@@ -16,11 +17,10 @@ end
 for a in 1..10000 do
   b = sum_divisor(a)
   if sum_divisor(b) == a
-    yuuai << a if !yuuai.include?(a)
-    yuuai << b if !yuuai.include?(b)
+    total += a if !yuuai.include?(a)
   end
   a += 1
 end
 
-p yuuai
+p total
 puts(Time.now - start_time)
