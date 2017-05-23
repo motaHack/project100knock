@@ -13,11 +13,9 @@ def sum_divisor(num)
   return sum
 end
 
-for a in 1..9999 do
+(0..9999).each do |a|
   b = sum_divisor(a)
-  if sum_divisor(b) == a && a != b
-    total += a
-  end
+  total += a if sum_divisor(b) == a && a != b
   a += 1
 end
 
