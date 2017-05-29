@@ -8,7 +8,7 @@ texts = File.open("names.txt","r") do |file|
   end
 end
 
-str = str.delete("\"")
+str = str.delete("\"").delete("\n")
 names = str.split(",")
 p names
 
