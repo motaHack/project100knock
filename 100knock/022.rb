@@ -7,11 +7,8 @@ texts = File.open("names.txt","r") do |file|
      str = line
   end
 end
-
 str = str.delete("\"").delete("\n")
 names = str.split(",")
-p names
-
-# そーとする
+names = names.sort
 
 puts(Time.now - start_time)
