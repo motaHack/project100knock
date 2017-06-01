@@ -2,6 +2,7 @@ start_time = Time.now
 str = nil
 names = []
 score = 0
+i = 1
 
 texts = File.open("names.txt","r") do |file|
   file.each_line do |line|
@@ -16,8 +17,9 @@ p names
 
 names.each do |name|
   name.each_char do |chr|
-    score += chr.ord - 64
+    score += (chr.ord - 64) * i
   end
+  i += 1
 end
 
 p score
