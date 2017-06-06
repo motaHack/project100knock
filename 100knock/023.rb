@@ -1,5 +1,7 @@
 start_time = Time.now
-i = 0
+i = 1
+nums = []
+total = 0
 
 def sum_divisor(num)
   divs = (1..(num/2)).select {|i|
@@ -14,9 +16,12 @@ end
 
 while i*2 < 28123 do
   if i < sum_divisor(i)
-    p i * 2
+    nums << i*2
   end
+  total += i
   i += 1
 end
+nums.each { |n| total - n}
 
+p total
 puts(Time.now - start_time)
