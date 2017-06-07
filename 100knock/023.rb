@@ -21,7 +21,8 @@ while i*2 < 28123 do
   total += i
   i += 1
 end
-nums.each { |n| total - n}
-
+nums.each { |n|
+  total = total - n
+}
 p total
 puts(Time.now - start_time)
