@@ -17,10 +17,15 @@ end
 while i*2 < 28123 do
   if i < sum_divisor(i)
     nums << i*2
+    p i * 2
   end
-  total += i
   i += 1
 end
+
+for n in 1..28123 do
+  total += n
+end
+
 nums.each { |n|
   total = total - n
 }
