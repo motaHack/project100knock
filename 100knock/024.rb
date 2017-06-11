@@ -1,4 +1,3 @@
-
 # nums = [0,1,2,3,4,5,6,7,8,9]
 # first = 0
 #
@@ -31,5 +30,4 @@ def solver
   end
   puts sofar
 end
-
 puts(Time.now - start_time)
