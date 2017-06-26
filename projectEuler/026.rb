@@ -4,30 +4,43 @@ max_length = 0
 
 def junkan_length(num)
   m = 1
+  o = 1
   s = 0
   t = 0
-  list = []
 
-  until list.include?(m) do
-    list[s] = m
+  loop do
     m = (m * 10) % num
-    if m == 0
+    o = (o * 10) % num
+    o = (o * 10) % num
+    if m == o
       break
     end
-    t += 1
   end
-  return t + 1
-end
 
-for d in 1..5 do
-  if d % 2 != 0
-    l = junkan_length(d)
-    if l > max_length
-      answer = d
-      max_length = l
+  if o != 0
+    o = 1
+    s = 1
+
+    while m != o do
+      s += 1
+      m = (m * 10) % num
+      o = (o * 10) % num
+    end
+
+    o = (o * 10) % num
+    t = s
+
+    while m != o do
+      t += 1
+      o = (o * 10) % num
     end
   end
+
+  return s
 end
 
+for d in 1..7 do
+  print(d,":",junkan_length(d),"\n")
+end
 p answer
 puts(Time.now - start_time)
