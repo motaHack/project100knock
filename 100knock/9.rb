@@ -1,9 +1,11 @@
 start_time = Time.now
 str = "I couldn't believe that I could actually understand what I was reading : the phenomenal power of the human mind ."
 arr = str.split(/[\s\.]/)
-arr = arr.map! { |word|
+arr.each { |word|
   if word.length > 4
-    p word[1..-2]
+    word[1..-2]
+    word = word[0] + word[-1]
+    p word
   end
 }
 
