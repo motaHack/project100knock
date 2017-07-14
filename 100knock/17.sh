@@ -1,1 +1,1 @@
-sort col1.txt | uniq -d | wc -l
+sort $1 | uniq | wc -l
