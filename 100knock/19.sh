@@ -1,1 +1,1 @@
-cut -f1 hightemp.txt | uniq
+cut -f1 hightemp.txt | uniq -c | sort
