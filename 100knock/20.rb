@@ -1,6 +1,8 @@
 require 'json'
+json = nil
 
-File.open('jawiki-country.json') do |file|
+File.open("jawiki-country.json") do |file|
     json = JSON.load(file)
-    p json
 end
+
+p json["イギリス"]
