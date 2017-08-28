@@ -4,7 +4,7 @@ start_time = Time.now
 
 i = 1
 sum = 0
-while i <= (1001/2) do
+while i < 500 do
   sum += (2 * i - 1)*(2 * i -1)
   i += 1
 end
