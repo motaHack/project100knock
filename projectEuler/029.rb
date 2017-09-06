@@ -5,7 +5,6 @@ b = 2
 
 while (a <= 100) do
   c = a ** b
-  p c
   if !arr.include?(c)
     arr << c
   end
