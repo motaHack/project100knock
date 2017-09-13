@@ -9,9 +9,8 @@ while a <= limit do
   (a.to_s).chars { |ch|
     n = ch.to_i
     sum += (n ** 5)
-    p sum
   }
-  answer += a  if sum == a
+  answer += a if sum == a
   a += 1
 end
 
