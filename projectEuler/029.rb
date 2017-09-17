@@ -1,17 +1,12 @@
 start_time = Time.now
 arr = []
-b = 2
 
-(2..10).each do {|a|
-  c = a ** b
-  if !arr.include?(c)
-    arr << c
-  end
-
-  if b == 100
-    b = 1
-    a += 1
-  end
+(2..100).each { |a|
+  (2..100).each { |b|
+    c = a ** b
+    arr << c if !arr.include?(c)
+    b = 1 if b == 100
+  }
 }
 
 p arr.size()
