@@ -5,5 +5,11 @@ public class no3 {
     int n = 2;
     int max;
     long target = 600851475143L;
+    int sq = Math.sqrt(target);
+
+    while (n < sq) {
+
+      n ++;
+    }
   }
 }
