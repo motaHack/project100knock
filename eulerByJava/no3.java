@@ -8,8 +8,11 @@ public class no3 {
     int sq = Math.sqrt(target);
 
     while (n < sq) {
-
+      if (target % n == 0) {
+        max = n;
+      }
       n ++;
     }
+    System.out.println(max);
   }
 }
