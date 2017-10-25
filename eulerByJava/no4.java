@@ -1,20 +1,24 @@
 import java.lang.*;
 
 public class no4 {
-  int a = 100;
-  int b = 100;
-  String max = "";
-  String productNum = "";
-  
-  while (b < 1000) {
-    while (a < 1000) {
-      productNum = (a * b).toString();
-      if (productNum.equals(productNum.reverse())) {
-        max = productNum;
+  public static void main() {
+    int a = 100;
+    int b = 100;
+    String max = "";
+    String productNum = "";
+
+    while (b < 1000) {
+      while (a < 1000) {
+        productNum = String.valueOf(a*b);
+        StringBuffer sb = new StringBuffer(productNum);
+        String rvs = sb.reverse().toString();
+        if (productNum.equals(productNum.equals(rvs))) {
+          max = productNum;
+        }
+        a++;
       }
-      a++;
+      b++;
     }
-    b++;
+    System.out.println(max);
   }
-  System.out.println(max);
 }
