@@ -7,7 +7,6 @@ public class no4 {
     String max = "";
     String productNum = "";
 
-
     while (b < 1000) {
       while (a < 1000) {
         productNum = String.valueOf(a*b);
@@ -19,6 +18,7 @@ public class no4 {
         a++;
       }
       b++;
+      a = 100;
     }
     System.out.println(max);
   }
