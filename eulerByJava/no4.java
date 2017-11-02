@@ -4,7 +4,7 @@ public class no4 {
   public static void main(String[] args) {
     int a = 100;
     int b = 100;
-    String max = "";
+    int max = "";
     String productNum = "";
 
     while (b < 1000) {
@@ -12,7 +12,7 @@ public class no4 {
         productNum = String.valueOf(a*b);
         StringBuffer sb = new StringBuffer(productNum);
         String rvs = sb.reverse().toString();
-        if (productNum.equals(rvs)) {
+        if (productNum.equals(rvs) && a * b > max) {
           max = productNum;
         }
         a++;
