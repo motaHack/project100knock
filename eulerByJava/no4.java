@@ -12,7 +12,8 @@ public class no4 {
         productNum = String.valueOf(a*b);
         StringBuffer sb = new StringBuffer(productNum);
         String rvs = sb.reverse().toString();
-        if (productNum.equals(rvs) && a * b > max) {
+        if (productNum.equals(rvs) 
+            && a * b > max) {
           max = productNum;
         }
         a++;
